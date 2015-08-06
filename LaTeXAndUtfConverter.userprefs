@@ -1,0 +1,12 @@
+﻿<Properties StartupItem="LaTeXAndUtfConverter/LaTeXAndUtfConverter.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="LaTeXAndUtfConverter/Letter.cs">
+    <Files>
+      <File FileName="LaTeXAndUtfConverter/Letter.cs" Line="93" Column="54" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
