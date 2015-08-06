@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Text;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace LaTeXAndUtfConverter
 {
@@ -12,29 +13,48 @@ namespace LaTeXAndUtfConverter
 	{
 		#region Deklaracje
 		private byte[] utf8;
+		private string latex;
 
 		[XmlIgnore]
 		/// <summary>
-		/// Liczbowa reprezentacja kodu UTF-8 litery
+		/// Liczbowa reprezentacja dziesiętna kodu UTF-8 litery
 		/// </summary>
 		/// <value>Kod UTF-8</value>
-		public uint UTF8
-		{ 
-			get { return BitConverter.ToUInt32 (utf8, 0); }
-			set { utf8 = BitConverter.GetBytes (value);	}
+		public uint UTF8_DEC{
+			get{
+				uint result = 0;
+				for (int i = 0; i < utf8.Length; i++)			// Ręczna transformacja uint na tablicę
+					result += 									// byte[] spowodowana niezgodnościami
+						(utf8 [i] * (uint)Math.Pow 				// pomiędzy kolejnością bajtów BitConvertera
+							(256, (utf8.Length - i -1)));		// oraz kodowania UTF8
+				return result;
+			}
+			set {
+				List<byte> bytes = new List<byte> ();			// BitConverter i tak korzystał by
+				while (value > 0) {								// z kolekcji. Moj kod wygląda mniej
+					bytes.Add ((byte)(value % 256));			// elegancko, ale pozwala lepiej kontrolowac
+					value /= 256;								// konwersje
+				}
+				utf8 = new byte[bytes.Count];					// ta wyglądająca na dłuższą wersja
+				for (int i = 0; i < utf8.Length; i++) {			// wydaje mi się efektywniejsza
+					utf8 [i] = bytes [utf8.Length - 1 - i];		// od razu uzupełnia tablicę właściwymi
+				}												// liczbami, bez odwracania
+				// utf8 = bytes.ToArray ();
+				// Array.Reverse (utf8);
+			}
 		}
+
 		/// <summary>
 		/// String reprezentujący szestnastkową reprezentację kodu UTF-8 litery.
 		/// </summary>
 		/// <value>UTF-8 HEX</value>
 		public string UTF8_HEX
 		{ 
-			get{ return BitConverter.ToUInt32(utf8,0).ToString ("X"); } 
-			set{
-				try{
-					utf8 = BitConverter.GetBytes(
-						uint.Parse(value, 
-							System.Globalization.NumberStyles.HexNumber));
+			get{ return UTF8_DEC.ToString ("X"); } 						// odniesienie przez już
+			set{														// skonfigurowaną właściwość
+				try{													// UTF8_DEC
+					UTF8_DEC = uint.Parse(value, 
+							System.Globalization.NumberStyles.HexNumber);
 				}
 				catch
 				{
@@ -42,40 +62,73 @@ namespace LaTeXAndUtfConverter
 				}
 			}
 		}
+
 		[XmlIgnore]
 		/// <summary>
 		/// Litera w postaci znaku char.
 		/// </summary>
 		/// <value>Litera</value>
-		public char Character { 
-			get{
-				try {
-					byte[] temp = new byte[4];
-					Array.Copy(utf8, temp, 4);
-					Array.Reverse(temp);
-					return Encoding.UTF8.GetChars (temp) [0]; // błąd
-				} catch {
-					throw;
-				}
-			}
-			set{
-				char[] t = { value };
-				utf8 = (Encoding.UTF8.GetBytes(t));
-				Array.Reverse (utf8);
-				} 
+		public char Character {
+			get { return Encoding.UTF8.GetChars (utf8) [0]; }
+			set { utf8 = Encoding.UTF8.GetBytes (new char[] { value }); }
 		}
+
 		[XmlIgnore]
 		public byte[] UTF8_bytes{ get { return utf8; } set { utf8 = value; } }
+
 		/// <summary>
 		/// String reprezentujący zapis litery diakrytyzowanej w LaTeX'u.
 		/// </summary>
 		/// <value>Kod LaTeX.</value>
-		public string LaTeX{ get; set; }
+		public string LaTeX{ get{return @latex;} set{latex = @value;} }
 
 		#endregion
 
 		public Letter ()
 		{
+		}
+		/// <summary>
+		/// Gets the bytes as bits as string.
+		/// </summary>
+		/// <returns>The bytes as bits as string.</returns>
+		public string GetBytesAsBitsString()
+		{
+			string result = "";
+			for (int i = 0; i < utf8.Length; i++) {
+				result += GetBitsFromByte (utf8 [i]);
+				if (i < utf8.Length - 1)
+					result += " ";
+			}
+			return result;
+		}
+
+		public override string ToString ()
+		{
+			return string.Format ("" +
+				"[Letter: " +
+				"UTF8_DEC={0}, " +
+				"UTF8_HEX={1}, " +
+				"Character={2}, " +
+				"UTF8_bytes={3}, " +
+				"LaTeX={4}]", 
+				UTF8_DEC, 
+				UTF8_HEX, 
+				Character, 
+				UTF8_bytes, 
+				LaTeX);
+		}
+
+		private string GetBitsFromByte(byte input)
+		{
+			byte temp = input;
+			int dziel = 0;
+			string result = "";
+			for (int i = 0; i < 8; i++) {
+				dziel = (int)(Math.Pow (2, 7 - i));
+				result += (temp / dziel).ToString ();
+				temp = (byte)(temp % dziel);
+			}
+			return result;
 		}
 	}
 }
