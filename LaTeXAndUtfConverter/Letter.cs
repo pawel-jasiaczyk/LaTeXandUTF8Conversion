@@ -12,8 +12,13 @@ namespace LaTeXAndUtfConverter
 	public class Letter
 	{
 		#region Deklaracje
+
 		private byte[] utf8;
 		private string latex;
+
+		#endregion
+
+		#region Właściwości
 
 		[XmlIgnore]
 		/// <summary>
@@ -84,9 +89,16 @@ namespace LaTeXAndUtfConverter
 
 		#endregion
 
+		#region Konstruktory
+
 		public Letter ()
 		{
 		}
+
+		#endregion
+
+		#region Publiczne Funkcje Pomocnicze
+
 		/// <summary>
 		/// Gets the bytes as bits as string.
 		/// </summary>
@@ -101,7 +113,11 @@ namespace LaTeXAndUtfConverter
 			}
 			return result;
 		}
-
+			
+		/// <summary>
+		/// Returns a <see cref="System.String"/> that represents the current <see cref="LaTeXAndUtfConverter.Letter"/>.
+		/// </summary>
+		/// <returns>A <see cref="System.String"/> that represents the current <see cref="LaTeXAndUtfConverter.Letter"/>.</returns>
 		public override string ToString ()
 		{
 			return string.Format ("" +
@@ -118,6 +134,29 @@ namespace LaTeXAndUtfConverter
 				LaTeX);
 		}
 
+		/// <summary>
+		/// Determines whether the specified <see cref="System.Object"/> is equal to the current <see cref="LaTeXAndUtfConverter.Letter"/>.
+		/// </summary>
+		/// <param name="obj">The <see cref="System.Object"/> to compare with the current <see cref="LaTeXAndUtfConverter.Letter"/>.</param>
+		/// <returns><c>true</c> if the specified <see cref="System.Object"/> is equal to the current
+		/// <see cref="LaTeXAndUtfConverter.Letter"/>; otherwise, <c>false</c>.</returns>
+		public override bool Equals (object obj)
+		{
+			if (obj == null)
+				return false;
+			if (!(obj is Letter))
+				return false;
+			else
+				if((this.UTF8_DEC == ((Letter)obj).UTF8_DEC) &&
+					this.LaTeX == ((Letter)obj).LaTeX) return true;
+			return false;
+		}
+
+		#endregion
+
+		#region Prywatne funkcje pomocnicze
+
+		// Zwraca bajt w postaci zero-jedynkowego stringa. Kolejność od bitów najbardziej znaczących.
 		private string GetBitsFromByte(byte input)
 		{
 			byte temp = input;
@@ -130,6 +169,8 @@ namespace LaTeXAndUtfConverter
 			}
 			return result;
 		}
+
+		#endregion
 	}
 }
 

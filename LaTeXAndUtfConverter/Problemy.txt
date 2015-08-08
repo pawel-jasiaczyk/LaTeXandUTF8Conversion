@@ -1,0 +1,16 @@
+﻿Problem edycji liter
+	Użytkownik powinien mieć możliwość tworzenia nowych liter, usuwania ich oraz edycji.
+	Gdy użytkownik dodaje lub edytuje literę, konieczne jest sprawdzenie, czy w alfabecie
+	nie ma dubletów.
+
+	Aby użytkownik nie mógł zedytować bezpośrednio alfabetu, dostanie kopie. Potrzeba metod typu clone.
+	Gdy użytkonik będzie zwracał zmodyfikowaną kopie - co wtedy?
+
+	Zmiana
+	Użytkownik klasy dostanie dostęp do właściwego alfabetu poprzez wskaźniki otrzymywane w tablicy gettera.
+	W gesti użytkownika klasy zostanie zapewnienie, by modyfikacje wprowadzane przez użytkownika końcowego 
+	były sprawdzane, by pracował na lokalnej kopii litery, a podczas wprowadzania zmian program usunie 
+	starą i wprowadzi nową.
+
+Sortowanie
+	Należy zapewnić literą sortowanie oraz porównywanie na podstawie różnych właściwości.
