@@ -20,11 +20,11 @@ namespace LaTeXAndUtfConverter
 
 		#region Właściwości
 
-		[XmlIgnore]
 		/// <summary>
 		/// Liczbowa reprezentacja dziesiętna kodu UTF-8 litery
 		/// </summary>
 		/// <value>Kod UTF-8</value>
+		[XmlIgnore]
 		public uint UTF8_DEC{
 			get{
 				uint result = 0;
@@ -67,17 +67,21 @@ namespace LaTeXAndUtfConverter
 				}
 			}
 		}
-
-		[XmlIgnore]
+			
 		/// <summary>
 		/// Litera w postaci znaku char.
 		/// </summary>
 		/// <value>Litera</value>
+		[XmlIgnore]
 		public char Character {
 			get { return Encoding.UTF8.GetChars (utf8) [0]; }
 			set { utf8 = Encoding.UTF8.GetBytes (new char[] { value }); }
 		}
 
+		/// <summary>
+		/// Bitowa postać bajtów UTF8.
+		/// </summary>
+		/// <value>The UT f8 bytes.</value>
 		[XmlIgnore]
 		public byte[] UTF8_bytes{ get { return utf8; } set { utf8 = value; } }
 
@@ -91,6 +95,9 @@ namespace LaTeXAndUtfConverter
 
 		#region Konstruktory
 
+		/// <summary>
+		/// Initializes a new instance of the <see cref="LaTeXAndUtfConverter.Letter"/> class.
+		/// </summary>
 		public Letter ()
 		{
 		}
@@ -125,12 +132,10 @@ namespace LaTeXAndUtfConverter
 				"UTF8_DEC={0}, " +
 				"UTF8_HEX={1}, " +
 				"Character={2}, " +
-				"UTF8_bytes={3}, " +
-				"LaTeX={4}]", 
+				"LaTeX={3}]", 
 				UTF8_DEC, 
 				UTF8_HEX, 
 				Character, 
-				UTF8_bytes, 
 				LaTeX);
 		}
 

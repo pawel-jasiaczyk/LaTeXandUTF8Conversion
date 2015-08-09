@@ -1,0 +1,5 @@
+/home/pawel/Dokumenty/PracaInzynierska/PracaInzynierska/Biblioteki/LaTeXAndUtfConverter/LaTeXAndUtfConverter/obj/Release/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/home/pawel/Dokumenty/PracaInzynierska/PracaInzynierska/Biblioteki/LaTeXAndUtfConverter/LaTeXAndUtfConverter/bin/Release/LaTeXAndUtfConverter.dll.mdb
+/home/pawel/Dokumenty/PracaInzynierska/PracaInzynierska/Biblioteki/LaTeXAndUtfConverter/LaTeXAndUtfConverter/bin/Release/LaTeXAndUtfConverter.dll
+/home/pawel/Dokumenty/PracaInzynierska/PracaInzynierska/Biblioteki/LaTeXAndUtfConverter/LaTeXAndUtfConverter/obj/Release/LaTeXAndUtfConverter.dll
+/home/pawel/Dokumenty/PracaInzynierska/PracaInzynierska/Biblioteki/LaTeXAndUtfConverter/LaTeXAndUtfConverter/obj/Release/LaTeXAndUtfConverter.dll.mdb

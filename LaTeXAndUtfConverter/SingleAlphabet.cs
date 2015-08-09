@@ -3,6 +3,10 @@ using System.Collections.Generic;
 
 namespace LaTeXAndUtfConverter
 {
+	/// <summary>
+	/// Klasa reprezentuje kolekcję liter do wykorzystania 
+	/// przy konresji formatu LaTeX/BibTeX na UTF8.
+	/// </summary>
 	public class SingleAlphabet
 	{
 		#region Deklaracje
@@ -13,6 +17,9 @@ namespace LaTeXAndUtfConverter
 
 		#region Konstruktowy
 
+		/// <summary>
+		/// Initializes a new instance of the <see cref="LaTeXAndUtfConverter.SingleAlphabet"/> class.
+		/// </summary>
 		public SingleAlphabet ()
 		{
 			alphabet = new List<Letter> ();
@@ -90,7 +97,6 @@ namespace LaTeXAndUtfConverter
 		/// nowa litera nie zostanie dodana, a funkcja zwróci wartość
 		/// AddLetterCode.EntryAlreadyExist.
 		/// </summary>
-		/// </summary>
 		/// <returns>Informacja o skuteczności operacji</returns>
 		/// <param name="latex">Ciąg znaków w LaTeX</param>
 		/// <param name="utf_dec">Dziesiętna wartość kodu UTF8</param>
@@ -104,7 +110,6 @@ namespace LaTeXAndUtfConverter
 		/// Jeżeli któraś z wartości litery już występuje w alfabecie
 		/// nowa litera nie zostanie dodana, a funkcja zwróci wartość
 		/// AddLetterCode.EntryAlreadyExist.
-		/// </summary>
 		/// </summary>
 		/// <returns>Informacja oskuteczności operacji</returns>
 		/// <param name="latex">Ciąg znaków LaTeX</param>
@@ -120,7 +125,6 @@ namespace LaTeXAndUtfConverter
 		/// nowa litera nie zostanie dodana, a funkcja zwróci wartość
 		/// AddLetterCode.EntryAlreadyExist.
 		/// </summary>
-		/// </summary>
 		/// <returns>Informacja o skuczeności operacji</returns>
 		/// <param name="latex">Ciąg znaków LaTeX</param>
 		/// <param name="character">Znak</param>
@@ -134,7 +138,6 @@ namespace LaTeXAndUtfConverter
 		/// Jeżeli któraś z wartości litery już występuje w alfabecie
 		/// nowa litera nie zostanie dodana, a funkcja zwróci wartość
 		/// AddLetterCode.EntryAlreadyExist.
-		/// </summary>
 		/// </summary>
 		/// <returns>Informacja o skuczeności operacji</returns>
 		/// <param name="latex">Ciąg znaków LaTeX</param>
@@ -201,6 +204,10 @@ namespace LaTeXAndUtfConverter
 
 		#region Delete
 
+		/// <summary>
+		/// Usuwa literę z kolekcji
+		/// </summary>
+		/// <param name="toDelete">To delete.</param>
 		public void DeleteLetter(Letter toDelete)
 		{
 			alphabet.Remove (toDelete);
@@ -210,14 +217,21 @@ namespace LaTeXAndUtfConverter
 
 		#region STATYCZNE FUNKCJE
 
-
-
 		#endregion
 	}
-
+	/// <summary>
+	/// Kod zakończenia działania funkcji bezpiecznego dodawania litery do kolekcji
+	/// </summary>
 	public enum AddLetterCode
 	{
+		/// <summary>
+		/// Funkcja dodawania litery zakończyła działanie pomyślnie
+		/// </summary>
 		OK,
+		/// <summary>
+		/// W kolekcji znajduje się już litera zawierająca przynajmniej jedną
+		/// z wartości ustawionych dla dodawanej litery.
+		/// </summary>
 		EntryAlreadyExist
 	}
 }
