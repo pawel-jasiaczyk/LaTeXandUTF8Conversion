@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
+using System.Xml.Serialization;
 
 namespace LaTeXAndUtfConverter
 {
@@ -211,6 +213,36 @@ namespace LaTeXAndUtfConverter
 		public void DeleteLetter(Letter toDelete)
 		{
 			alphabet.Remove (toDelete);
+		}
+
+		#endregion
+
+		#region Serializacja i zapis do XML
+
+		// EKSPERYMENT!!!
+		// jakoś działa. Coś zapisuje do XML'a
+
+		/// <summary>
+		/// Funkcja zwraca strumień z zserializowanym alfabetem gotowy do zapisu.
+		/// </summary>
+		/// <returns>The serialized stream.</returns>
+		/// <param name="path">Ścieżka pod jaką ma zostać zapisany alfabet</param>
+		public void WriteToFile(string path)
+		{
+			using (FileStream result = new FileStream (path, FileMode.OpenOrCreate)) {
+				XmlSerializer serializer = new XmlSerializer (typeof(List<Letter>));
+				serializer.Serialize (result, this.alphabet);
+				// result.
+			}
+		}
+
+		public void ReadFromFile(string path)
+		{
+			using (FileStream source = new FileStream(path, FileMode.Open)){
+				XmlSerializer deserializer = new XmlSerializer (typeof(List<Letter>));
+				// System.Xml.XmlTextReader reader = new System.Xml.XmlTextReader (source);
+				this.alphabet = (List<Letter>)deserializer.Deserialize(source);
+				}
 		}
 
 		#endregion

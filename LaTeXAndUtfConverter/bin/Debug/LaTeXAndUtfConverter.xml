@@ -8,91 +8,109 @@
             <summary>
             Klasa reprezentuje litery diakrytyzowane.
             Ich kod UTF-8 oraz string reprezentujący je w systemie LaTeX(UTF-8)
-            </summary></member>
+            </summary>
+        </member>
         <member name="P:LaTeXAndUtfConverter.Letter.UTF8_DEC">
             <summary>
             Liczbowa reprezentacja dziesiętna kodu UTF-8 litery
             </summary>
-            <value>Kod UTF-8</value></member>
+            <value>Kod UTF-8</value>
+        </member>
         <member name="P:LaTeXAndUtfConverter.Letter.UTF8_HEX">
             <summary>
             String reprezentujący szestnastkową reprezentację kodu UTF-8 litery.
             </summary>
-            <value>UTF-8 HEX</value></member>
+            <value>UTF-8 HEX</value>
+        </member>
         <member name="P:LaTeXAndUtfConverter.Letter.Character">
             <summary>
             Litera w postaci znaku char.
             </summary>
-            <value>Litera</value></member>
+            <value>Litera</value>
+        </member>
         <member name="P:LaTeXAndUtfConverter.Letter.UTF8_bytes">
             <summary>
             Bitowa postać bajtów UTF8.
             </summary>
-            <value>The UT f8 bytes.</value></member>
+            <value>The UT f8 bytes.</value>
+        </member>
         <member name="P:LaTeXAndUtfConverter.Letter.LaTeX">
             <summary>
             String reprezentujący zapis litery diakrytyzowanej w LaTeX'u.
             </summary>
-            <value>Kod LaTeX.</value></member>
+            <value>Kod LaTeX.</value>
+        </member>
         <member name="M:LaTeXAndUtfConverter.Letter.#ctor">
             <summary>
             Initializes a new instance of the <see cref="T:LaTeXAndUtfConverter.Letter" /> class.
-            </summary></member>
+            </summary>
+        </member>
         <member name="M:LaTeXAndUtfConverter.Letter.GetBytesAsBitsString">
             <summary>
             Gets the bytes as bits as string.
             </summary>
-            <returns>The bytes as bits as string.</returns></member>
+            <returns>The bytes as bits as string.</returns>
+        </member>
         <member name="M:LaTeXAndUtfConverter.Letter.ToString">
             <summary>
             Returns a <see cref="T:System.String" /> that represents the current <see cref="T:LaTeXAndUtfConverter.Letter" />.
             </summary>
-            <returns>A <see cref="T:System.String" /> that represents the current <see cref="T:LaTeXAndUtfConverter.Letter" />.</returns></member>
+            <returns>A <see cref="T:System.String" /> that represents the current <see cref="T:LaTeXAndUtfConverter.Letter" />.</returns>
+        </member>
         <member name="M:LaTeXAndUtfConverter.Letter.Equals(System.Object)">
             <summary>
             Determines whether the specified <see cref="T:System.Object" /> is equal to the current <see cref="T:LaTeXAndUtfConverter.Letter" />.
             </summary>
             <param name="obj">The <see cref="T:System.Object" /> to compare with the current <see cref="T:LaTeXAndUtfConverter.Letter" />.</param>
-            <returns><c>true</c> if the specified <see cref="T:System.Object" /> is equal to the current
-            <see cref="T:LaTeXAndUtfConverter.Letter" />; otherwise, <c>false</c>.</returns></member>
+            <returns>
+                <c>true</c> if the specified <see cref="T:System.Object" /> is equal to the current
+            <see cref="T:LaTeXAndUtfConverter.Letter" />; otherwise, <c>false</c>.</returns>
+        </member>
         <member name="T:LaTeXAndUtfConverter.SingleAlphabet">
             <summary>
             Klasa reprezentuje kolekcję liter do wykorzystania
             przy konresji formatu LaTeX/BibTeX na UTF8.
-            </summary></member>
+            </summary>
+        </member>
         <member name="M:LaTeXAndUtfConverter.SingleAlphabet.#ctor">
             <summary>
             Initializes a new instance of the <see cref="T:LaTeXAndUtfConverter.SingleAlphabet" /> class.
-            </summary></member>
+            </summary>
+        </member>
         <member name="M:LaTeXAndUtfConverter.SingleAlphabet.AddLetter_Unsafe(LaTeXAndUtfConverter.Letter)">
             <summary>
             Metoda doda obiekt Letter do kolekcji bez żadnych sprawdzeń
             </summary>
-            <param name="letter">Letter to add.</param></member>
+            <param name="letter">Letter to add.</param>
+        </member>
         <member name="M:LaTeXAndUtfConverter.SingleAlphabet.AddLetter_Unsafe(System.String,System.UInt32)">
             <summary>
             Metoda doda obiekt Letter do kolekcji bez żadnych sprawdzeń
             </summary>
             <param name="latex">Ciąg znaków w LaTeX</param>
-            <param name="utf_dec">Dziesiętna wartość kodu UTF8</param></member>
+            <param name="utf_dec">Dziesiętna wartość kodu UTF8</param>
+        </member>
         <member name="M:LaTeXAndUtfConverter.SingleAlphabet.AddLetter_Unsafe(System.String,System.String)">
             <summary>
             Metoda doda obiekt Letter do kolekcji bez żadnych sprawdzeń
             </summary>
             <param name="latex">Ciąg znaków w LaTeX</param>
-            <param name="utf_hex">Heksadecymalna wartość kodu UTF8</param></member>
+            <param name="utf_hex">Heksadecymalna wartość kodu UTF8</param>
+        </member>
         <member name="M:LaTeXAndUtfConverter.SingleAlphabet.AddLetter_Unsafe(System.String,System.Char)">
             <summary>
             Metoda doda obiekt Letter do kolekcji bez żadnych sprawdzeń
             </summary>
             <param name="latex">Ciąg znaków w LaTeX</param>
-            <param name="character">Znak UTF8</param></member>
+            <param name="character">Znak UTF8</param>
+        </member>
         <member name="M:LaTeXAndUtfConverter.SingleAlphabet.AddLetter_Unsafe(System.String,System.Byte[])">
             <summary>
             Metoda doda obiekt Letter do kolekcji bez żadnych sprawdzeń
             </summary>
             <param name="latex">Ciąg znaków w LaTeX</param>
-            <param name="utf_bytes">Bajty UTF8</param></member>
+            <param name="utf_bytes">Bajty UTF8</param>
+        </member>
         <member name="M:LaTeXAndUtfConverter.SingleAlphabet.AddLetter(LaTeXAndUtfConverter.Letter)">
             <summary>
             Dodaje litere do alfabetu.
@@ -101,7 +119,8 @@
             AddLetterCode.EntryAlreadyExist.
             </summary>
             <returns>Informajca o skuteczności dodania.</returns>
-            <param name="letter">Litera</param></member>
+            <param name="letter">Litera</param>
+        </member>
         <member name="M:LaTeXAndUtfConverter.SingleAlphabet.AddLetter(System.String,System.UInt32)">
             <summary>
             Dodaje litere do alfabetu.
@@ -111,7 +130,8 @@
             </summary>
             <returns>Informacja o skuteczności operacji</returns>
             <param name="latex">Ciąg znaków w LaTeX</param>
-            <param name="utf_dec">Dziesiętna wartość kodu UTF8</param></member>
+            <param name="utf_dec">Dziesiętna wartość kodu UTF8</param>
+        </member>
         <member name="M:LaTeXAndUtfConverter.SingleAlphabet.AddLetter(System.String,System.String)">
             <summary>
             Dodaje litere do alfabetu.
@@ -121,7 +141,8 @@
             </summary>
             <returns>Informacja oskuteczności operacji</returns>
             <param name="latex">Ciąg znaków LaTeX</param>
-            <param name="utf_hex">Hexadecymalna wartość UTF8</param></member>
+            <param name="utf_hex">Hexadecymalna wartość UTF8</param>
+        </member>
         <member name="M:LaTeXAndUtfConverter.SingleAlphabet.AddLetter(System.String,System.Char)">
             <summary>
             Dodaje litere do alfabetu.
@@ -131,7 +152,8 @@
             </summary>
             <returns>Informacja o skuczeności operacji</returns>
             <param name="latex">Ciąg znaków LaTeX</param>
-            <param name="character">Znak</param></member>
+            <param name="character">Znak</param>
+        </member>
         <member name="M:LaTeXAndUtfConverter.SingleAlphabet.AddLetter(System.String,System.Byte[])">
             <summary>
             Dodaje litere do alfabetu.
@@ -141,14 +163,16 @@
             </summary>
             <returns>Informacja o skuczeności operacji</returns>
             <param name="latex">Ciąg znaków LaTeX</param>
-            <param name="utf_bytes">Utf8 bytes.</param></member>
+            <param name="utf_bytes">Utf8 bytes.</param>
+        </member>
         <member name="M:LaTeXAndUtfConverter.SingleAlphabet.GetLettersByLatexString(System.String)">
             <summary>
             Zwraca tablicę wszystkich obiektów Letter z wartością
             pola LaTeX == latex.
             </summary>
             <returns>Tablica liter</returns>
-            <param name="latex">Poszukiwany format LaTeX</param></member>
+            <param name="latex">Poszukiwany format LaTeX</param>
+        </member>
         <member name="M:LaTeXAndUtfConverter.SingleAlphabet.GetAllLettersInlcudingLatexString(System.String)">
             <summary>
             Zwraca tablicę wszystkich obiektów Letter dal których
@@ -161,24 +185,36 @@
             W przeciwieństwie do metody <code>GetLettersByLatexString(string latex)</code>
             zwróci również obiekty Letter dla których poszukiwany string
             jest jedynie częśćią zawartości pola LaTeX
-            </description></member>
+            </description>
+        </member>
         <member name="M:LaTeXAndUtfConverter.SingleAlphabet.DeleteLetter(LaTeXAndUtfConverter.Letter)">
             <summary>
             Usuwa literę z kolekcji
             </summary>
-            <param name="toDelete">To delete.</param></member>
+            <param name="toDelete">To delete.</param>
+        </member>
+        <member name="M:LaTeXAndUtfConverter.SingleAlphabet.WriteToFile(System.String)">
+            <summary>
+            Funkcja zwraca strumień z zserializowanym alfabetem gotowy do zapisu.
+            </summary>
+            <returns>The serialized stream.</returns>
+            <param name="path">Ścieżka pod jaką ma zostać zapisany alfabet</param>
+        </member>
         <member name="T:LaTeXAndUtfConverter.AddLetterCode">
             <summary>
             Kod zakończenia działania funkcji bezpiecznego dodawania litery do kolekcji
-            </summary></member>
+            </summary>
+        </member>
         <member name="F:LaTeXAndUtfConverter.AddLetterCode.OK">
             <summary>
             Funkcja dodawania litery zakończyła działanie pomyślnie
-            </summary></member>
+            </summary>
+        </member>
         <member name="F:LaTeXAndUtfConverter.AddLetterCode.EntryAlreadyExist">
             <summary>
             W kolekcji znajduje się już litera zawierająca przynajmniej jedną
             z wartości ustawionych dla dodawanej litery.
-            </summary></member>
+            </summary>
+        </member>
     </members>
 </doc>
