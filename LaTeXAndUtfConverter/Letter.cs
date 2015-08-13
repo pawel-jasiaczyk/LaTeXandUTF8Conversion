@@ -53,6 +53,7 @@ namespace LaTeXAndUtfConverter
 		/// String reprezentujący szestnastkową reprezentację kodu UTF-8 litery.
 		/// </summary>
 		/// <value>UTF-8 HEX</value>
+		[XmlAttribute]
 		public string UTF8_HEX
 		{ 
 			get{ return UTF8_DEC.ToString ("X"); } 						// odniesienie przez już
@@ -89,6 +90,7 @@ namespace LaTeXAndUtfConverter
 		/// String reprezentujący zapis litery diakrytyzowanej w LaTeX'u.
 		/// </summary>
 		/// <value>Kod LaTeX.</value>
+		[XmlAttribute]
 		public string LaTeX{ get{return @latex;} set{latex = @value;} }
 
 		#endregion

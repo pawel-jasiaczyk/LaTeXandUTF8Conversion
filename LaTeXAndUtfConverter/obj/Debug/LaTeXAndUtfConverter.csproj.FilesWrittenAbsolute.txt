@@ -1,8 +1,3 @@
-/home/pawel/Dokumenty/PracaInzynierska/PracaInzynierska/Biblioteki/LaTeXAndUtfConverter/LaTeXAndUtfConverter/obj/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
-/home/pawel/Dokumenty/PracaInzynierska/PracaInzynierska/Biblioteki/LaTeXAndUtfConverter/LaTeXAndUtfConverter/bin/Debug/LaTeXAndUtfConverter.dll.mdb
-/home/pawel/Dokumenty/PracaInzynierska/PracaInzynierska/Biblioteki/LaTeXAndUtfConverter/LaTeXAndUtfConverter/bin/Debug/LaTeXAndUtfConverter.dll
-/home/pawel/Dokumenty/PracaInzynierska/PracaInzynierska/Biblioteki/LaTeXAndUtfConverter/LaTeXAndUtfConverter/obj/Debug/LaTeXAndUtfConverter.dll
-/home/pawel/Dokumenty/PracaInzynierska/PracaInzynierska/Biblioteki/LaTeXAndUtfConverter/LaTeXAndUtfConverter/obj/Debug/LaTeXAndUtfConverter.dll.mdb
 /home/pawel/Dokumenty/InzynierkaGit/Biblioteki/LaTeXandUTF8Conversion/LaTeXAndUtfConverter/obj/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
 /home/pawel/Dokumenty/InzynierkaGit/Biblioteki/LaTeXandUTF8Conversion/LaTeXAndUtfConverter/bin/Debug/LaTeXAndUtfConverter.dll.mdb
 /home/pawel/Dokumenty/InzynierkaGit/Biblioteki/LaTeXandUTF8Conversion/LaTeXAndUtfConverter/bin/Debug/LaTeXAndUtfConverter.dll

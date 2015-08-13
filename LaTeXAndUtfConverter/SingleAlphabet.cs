@@ -27,6 +27,16 @@ namespace LaTeXAndUtfConverter
 			alphabet = new List<Letter> ();
 		}
 
+		/// <summary>
+		/// Tworzy alfabet z pliku xml z poprzedniej serializacji.
+		/// </summary>
+		/// <param name="path">Path.</param>
+		public SingleAlphabet(string path)
+		{
+			alphabet = new List<Letter>();
+			ReadFromFile(path);
+		}
+
 		#endregion
 
 		#region Add
@@ -229,13 +239,15 @@ namespace LaTeXAndUtfConverter
 		/// <param name="path">Ścieżka pod jaką ma zostać zapisany alfabet</param>
 		public void WriteToFile(string path)
 		{
-			using (FileStream result = new FileStream (path, FileMode.OpenOrCreate)) {
+			using (FileStream result = new FileStream (path, FileMode.Create)) {
 				XmlSerializer serializer = new XmlSerializer (typeof(List<Letter>));
 				serializer.Serialize (result, this.alphabet);
-				// result.
 			}
 		}
-
+		/// <summary>
+		/// Odczytuje kolekcję liter z pliku XML.
+		/// </summary>
+		/// <param name="path">Path.</param>
 		public void ReadFromFile(string path)
 		{
 			using (FileStream source = new FileStream(path, FileMode.Open)){
@@ -243,6 +255,26 @@ namespace LaTeXAndUtfConverter
 				// System.Xml.XmlTextReader reader = new System.Xml.XmlTextReader (source);
 				this.alphabet = (List<Letter>)deserializer.Deserialize(source);
 				}
+		}
+
+		#endregion
+
+		#region Funkcje Pomocnicze
+
+		/// <summary>
+		/// Returns a <see cref="System.String"/> that represents the current <see cref="LaTeXAndUtfConverter.SingleAlphabet"/>.
+		/// </summary>
+		/// <returns>A <see cref="System.String"/> that represents the current <see cref="LaTeXAndUtfConverter.SingleAlphabet"/>.</returns>
+		public override string ToString ()
+		{
+			string result = "[ alphabet:\n";
+			for (int i = 0; i < alphabet.Count; i++) {
+				result += alphabet [i];
+				if (i < alphabet.Count - 1)
+					result += "\n";
+			}
+			result += "]";
+			return result;
 		}
 
 		#endregion

@@ -200,6 +200,12 @@
             <returns>The serialized stream.</returns>
             <param name="path">Ścieżka pod jaką ma zostać zapisany alfabet</param>
         </member>
+        <member name="M:LaTeXAndUtfConverter.SingleAlphabet.ReadFromFile(System.String)">
+            <summary>
+            Odczytuje kolekcję liter z pliku XML.
+            </summary>
+            <param name="path">Path.</param>
+        </member>
         <member name="T:LaTeXAndUtfConverter.AddLetterCode">
             <summary>
             Kod zakończenia działania funkcji bezpiecznego dodawania litery do kolekcji
