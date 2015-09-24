@@ -1,5 +1,0 @@
-C:\Users\Paweł\Documents\Visual Studio 2013\Projects\Inżynierka\Biblioteki\LaTeXandUTF8Conversion\LaTeXAndUtfConverter\bin\Release\LaTeXAndUtfConverter.dll
-C:\Users\Paweł\Documents\Visual Studio 2013\Projects\Inżynierka\Biblioteki\LaTeXandUTF8Conversion\LaTeXAndUtfConverter\bin\Release\LaTeXAndUtfConverter.pdb
-C:\Users\Paweł\Documents\Visual Studio 2013\Projects\Inżynierka\Biblioteki\LaTeXandUTF8Conversion\LaTeXAndUtfConverter\obj\Release\LaTeXAndUtfConverter.csprojResolveAssemblyReference.cache
-C:\Users\Paweł\Documents\Visual Studio 2013\Projects\Inżynierka\Biblioteki\LaTeXandUTF8Conversion\LaTeXAndUtfConverter\obj\Release\LaTeXAndUtfConverter.dll
-C:\Users\Paweł\Documents\Visual Studio 2013\Projects\Inżynierka\Biblioteki\LaTeXandUTF8Conversion\LaTeXAndUtfConverter\obj\Release\LaTeXAndUtfConverter.pdb

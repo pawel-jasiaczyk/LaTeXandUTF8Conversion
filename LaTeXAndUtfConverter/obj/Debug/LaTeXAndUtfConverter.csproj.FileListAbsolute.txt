@@ -3,5 +3,3 @@ C:\Users\Paweł\Documents\Visual Studio 2013\Projects\Inżynierka\Biblioteki\LaT
 C:\Users\Paweł\Documents\Visual Studio 2013\Projects\Inżynierka\Biblioteki\LaTeXandUTF8Conversion\LaTeXAndUtfConverter\bin\Debug\LaTeXAndUtfConverter.pdb
 C:\Users\Paweł\Documents\Visual Studio 2013\Projects\Inżynierka\Biblioteki\LaTeXandUTF8Conversion\LaTeXAndUtfConverter\obj\Debug\LaTeXAndUtfConverter.dll
 C:\Users\Paweł\Documents\Visual Studio 2013\Projects\Inżynierka\Biblioteki\LaTeXandUTF8Conversion\LaTeXAndUtfConverter\obj\Debug\LaTeXAndUtfConverter.pdb
-C:\Users\Paweł\Documents\Visual Studio 2013\Projects\Inżynierka\Biblioteki\LaTeXandUTF8Conversion\LaTeXAndUtfConverter\bin\Debug\LaTeXAndUtfConverter.dll.CodeAnalysisLog.xml
-C:\Users\Paweł\Documents\Visual Studio 2013\Projects\Inżynierka\Biblioteki\LaTeXandUTF8Conversion\LaTeXAndUtfConverter\bin\Debug\LaTeXAndUtfConverter.dll.lastcodeanalysissucceeded
