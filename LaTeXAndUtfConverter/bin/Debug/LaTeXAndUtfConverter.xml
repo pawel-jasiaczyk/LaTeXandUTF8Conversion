@@ -6,34 +6,9 @@
     <members>
         <member name="T:LaTeXAndUtfConverter.Letter">
             <summary>
-            Klasa reprezentuje litery diakrytyzowane. 
+            Klasa reprezentuje litery diakrytyzowane.
             Ich kod UTF-8 oraz string reprezentujący je w systemie LaTeX(UTF-8)
             </summary>
-        </member>
-        <member name="M:LaTeXAndUtfConverter.Letter.#ctor">
-            <summary>
-            Initializes a new instance of the <see cref="T:LaTeXAndUtfConverter.Letter"/> class.
-            </summary>
-        </member>
-        <member name="M:LaTeXAndUtfConverter.Letter.GetBytesAsBitsString">
-            <summary>
-            Gets the bytes as bits as string.
-            </summary>
-            <returns>The bytes as bits as string.</returns>
-        </member>
-        <member name="M:LaTeXAndUtfConverter.Letter.ToString">
-            <summary>
-            Returns a <see cref="T:System.String"/> that represents the current <see cref="T:LaTeXAndUtfConverter.Letter"/>.
-            </summary>
-            <returns>A <see cref="T:System.String"/> that represents the current <see cref="T:LaTeXAndUtfConverter.Letter"/>.</returns>
-        </member>
-        <member name="M:LaTeXAndUtfConverter.Letter.Equals(System.Object)">
-            <summary>
-            Determines whether the specified <see cref="T:System.Object"/> is equal to the current <see cref="T:LaTeXAndUtfConverter.Letter"/>.
-            </summary>
-            <param name="obj">The <see cref="T:System.Object"/> to compare with the current <see cref="T:LaTeXAndUtfConverter.Letter"/>.</param>
-            <returns><c>true</c> if the specified <see cref="T:System.Object"/> is equal to the current
-            <see cref="T:LaTeXAndUtfConverter.Letter"/>; otherwise, <c>false</c>.</returns>
         </member>
         <member name="P:LaTeXAndUtfConverter.Letter.UTF8_DEC">
             <summary>
@@ -65,15 +40,41 @@
             </summary>
             <value>Kod LaTeX.</value>
         </member>
+        <member name="M:LaTeXAndUtfConverter.Letter.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:LaTeXAndUtfConverter.Letter" /> class.
+            </summary>
+        </member>
+        <member name="M:LaTeXAndUtfConverter.Letter.GetBytesAsBitsString">
+            <summary>
+            Gets the bytes as bits as string.
+            </summary>
+            <returns>The bytes as bits as string.</returns>
+        </member>
+        <member name="M:LaTeXAndUtfConverter.Letter.ToString">
+            <summary>
+            Returns a <see cref="T:System.String" /> that represents the current <see cref="T:LaTeXAndUtfConverter.Letter" />.
+            </summary>
+            <returns>A <see cref="T:System.String" /> that represents the current <see cref="T:LaTeXAndUtfConverter.Letter" />.</returns>
+        </member>
+        <member name="M:LaTeXAndUtfConverter.Letter.Equals(System.Object)">
+            <summary>
+            Determines whether the specified <see cref="T:System.Object" /> is equal to the current <see cref="T:LaTeXAndUtfConverter.Letter" />.
+            </summary>
+            <param name="obj">The <see cref="T:System.Object" /> to compare with the current <see cref="T:LaTeXAndUtfConverter.Letter" />.</param>
+            <returns>
+                <c>true</c> if the specified <see cref="T:System.Object" /> is equal to the current
+            <see cref="T:LaTeXAndUtfConverter.Letter" />; otherwise, <c>false</c>.</returns>
+        </member>
         <member name="T:LaTeXAndUtfConverter.SingleAlphabet">
             <summary>
-            Klasa reprezentuje kolekcję liter do wykorzystania 
+            Klasa reprezentuje kolekcję liter do wykorzystania
             przy konresji formatu LaTeX/BibTeX na UTF8.
             </summary>
         </member>
         <member name="M:LaTeXAndUtfConverter.SingleAlphabet.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:LaTeXAndUtfConverter.SingleAlphabet"/> class.
+            Initializes a new instance of the <see cref="T:LaTeXAndUtfConverter.SingleAlphabet" /> class.
             </summary>
         </member>
         <member name="M:LaTeXAndUtfConverter.SingleAlphabet.#ctor(System.String)">
@@ -213,9 +214,9 @@
         </member>
         <member name="M:LaTeXAndUtfConverter.SingleAlphabet.ToString">
             <summary>
-            Returns a <see cref="T:System.String"/> that represents the current <see cref="T:LaTeXAndUtfConverter.SingleAlphabet"/>.
+            Returns a <see cref="T:System.String" /> that represents the current <see cref="T:LaTeXAndUtfConverter.SingleAlphabet" />.
             </summary>
-            <returns>A <see cref="T:System.String"/> that represents the current <see cref="T:LaTeXAndUtfConverter.SingleAlphabet"/>.</returns>
+            <returns>A <see cref="T:System.String" /> that represents the current <see cref="T:LaTeXAndUtfConverter.SingleAlphabet" />.</returns>
         </member>
         <member name="T:LaTeXAndUtfConverter.AddLetterCode">
             <summary>
